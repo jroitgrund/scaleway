@@ -105,6 +105,7 @@ resource "scaleway_container" "mattermost" {
     "MM_EMAILSETTINGS_ENABLESMTPAUTH"         = true
     "MM_EMAILSETTINGS_SMTPUSERNAME"           = scaleway_tem_domain.tem.smtps_auth_user
     "MM_EMAILSETTINGS_SMTPPASSWORD"           = var.scaleway_secret_key
+    "MM_PLUGINSETTINGS_ENABLEUPLOADS"         = true
   }
 }
 
